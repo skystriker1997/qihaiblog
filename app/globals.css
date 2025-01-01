@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #bbbbbb;
+  --foreground: #1a2a3a;
+}
+
+
+@font-face {
+  font-family: 'LXGWBrightCode';
+  src: url('fonts/LxgwBrightCode/LXGWBrightCode-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: LXGWBrightCode, 'Microsoft YaHei', 'PingFang SC', 'WenQuanYi Zen Hei', sans-serif;
+}
