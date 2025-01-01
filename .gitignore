@@ -41,3 +41,7 @@ next-env.d.ts
 
 #fonts
 /app/fonts/LxgwBrightCode
+
+
+#idea
+/.idea
