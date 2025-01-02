@@ -3,9 +3,20 @@ import { addTask } from '@/libs/t2i-task-service';
 import { TaskParams } from "@/type/type";
 
 
+const checkServiceStatus = async () => {
+    const res = await fetch('http://localhost:3000/api/t2i-service-status');
+    return res.json();
+}
+
 
 export async function POST(req: NextRequest) {
-    const taskArgs: TaskParams = await req.json();
-    const taskId: string = await addTask(taskArgs);
-    return NextResponse.json(taskId);
+    const { isServiceAvailable } = await checkServiceStatus();
+    if(isServiceAvailable) {
+        const taskArgs: TaskParams = await req.json();
+        const taskId: string = await addTask(taskArgs);
+        return NextResponse.json({ taskId });
+    } else {
+        return NextResponse.json({ taskId: "-1" });
+    }
+
 }

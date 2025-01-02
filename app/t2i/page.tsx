@@ -13,6 +13,8 @@ export default function HomePage() {
     const [base64Image, setBase64Image] = useState<string | null>(null);
     const [status, setStatus] = useState<string | null>(null);
 
+
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
@@ -20,9 +22,6 @@ export default function HomePage() {
             alert('提示词不能为空！');
             return;
         }
-
-        setStatus('pending');
-        setBase64Image(null);
 
         const taskArgs: TaskParams = {
             prompt,
@@ -40,7 +39,16 @@ export default function HomePage() {
             body: JSON.stringify(taskArgs),
         });
 
-        const taskId: string = await res.json();
+        const { taskId } = await res.json();
+
+        if (taskId === "-1") {
+            alert('GPU服务器打烊中，请稍后访问！');
+            return;
+        }
+
+        setStatus('pending');
+        setBase64Image(null);
+
         setTaskId(taskId);
 
         const interval = setInterval(async () => {

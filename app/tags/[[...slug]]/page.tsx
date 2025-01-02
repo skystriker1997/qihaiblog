@@ -65,7 +65,7 @@ export default async function TagPage({ params }: { params: Promise<{ slug: stri
                         : ``}
                 </h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 gap-6">
                     {posts.map((post) => (
                         <div key={post.slug}>
                             <PostOverviewCard postMeta={post}/>

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function NavigationBar() {
     return (
-        <nav className="py-2 px-2 w-full lg:max-w-[50%] mx-auto bg-[#dddddd]">
+        <nav className="py-2 px-2 w-full lg:max-w-[50%] mx-auto bg-gray-200">
             <div className="flex flex-row justify-between items-center py-2 px-2">
                 <Link href="/" className="text-[#1a2a3a] text-2xl">
                     岐海鄉民

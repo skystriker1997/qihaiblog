@@ -1,9 +1,12 @@
+"use client"
+
 import Link from 'next/link';
 import { openingWords } from "@/special_pin/opening-words";
 import { PostMeta } from "@/type/type";
 import { PostOverviewCard } from "@/components/post-overview-card";
 import Image from "next/image";
 import React from "react";
+import { ReactTyped } from "react-typed";
 
 
 export default function Home() {
@@ -11,8 +14,7 @@ export default function Home() {
     return (
         <main>
             <div className="flex flex-col gap-16">
-                <div
-                    className="bg-[#dddddd] text-[#1a2a3a] text-2xl text-center py-8">
+                <div className="bg-gray-200 text-[#1a2a3a] text-2xl text-center py-8">
                     欢迎来到岐海乡民的空间，<br/><br/>
                     这里是我的文库，<br/><br/>提供免费的生成式ai应用
                 </div>
