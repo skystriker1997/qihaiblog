@@ -49,3 +49,6 @@ next-env.d.ts
 
 #post cover
 /public/post-cover
+
+#special pin
+/special_pin
