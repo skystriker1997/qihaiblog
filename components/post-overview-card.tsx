@@ -12,7 +12,7 @@ export function PostOverviewCard({ postMeta }: { postMeta: PostMeta }) {
         >
             <div className="w-full relative">
                 <img
-                    src={`/post-cover/${postMeta.slug}.jpg`}
+                    src={`/posts-images/${postMeta.slug}/cover.jpg`}
                     alt={postMeta.title}
                     className="w-full h-auto rounded-md"
                 />
