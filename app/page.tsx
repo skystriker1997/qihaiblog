@@ -1,7 +1,7 @@
 "use client"
 
 import Link from 'next/link';
-import { openingWords } from "@/special_pin/opening-words";
+import { topArticle } from "@/special-pin/top-article";
 import { PostMeta } from "@/type/type";
 import { PostOverviewCard } from "@/components/post-overview-card";
 import Image from "next/image";
@@ -46,8 +46,8 @@ export default function Home() {
                         <span className="text-[#1a2a3a] text-2xl"> 置顶文章</span>
                     </div>
                     <div className="grid grid-cols-1 gap-4">
-                        <div key={openingWords.slug}>
-                            <PostOverviewCard postMeta={openingWords}/>
+                        <div key={topArticle.slug}>
+                            <PostOverviewCard postMeta={topArticle}/>
                         </div>
                     </div>
                 </div>
