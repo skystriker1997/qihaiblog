@@ -31,7 +31,7 @@ export default function HomePage() {
             seed
         };
 
-        const res = await fetch(process.env.SERVICE_PORT+'/api/t2i-queue-task', {
+        const res = await fetch(`${process.env.SERVICE_PORT}/api/t2i-queue-task`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ export default function HomePage() {
         setTaskId(taskId);
 
         const interval = setInterval(async () => {
-            const resultRes = await fetch(process.env.SERVICE_PORT+`/api/t2i-get-result?taskId=${taskId}`);
+            const resultRes = await fetch(`${process.env.SERVICE_PORT}/api/t2i-get-result?taskId=${taskId}`);
             const resultData = await resultRes.json();
 
             if (resultData.status === 'done') {
