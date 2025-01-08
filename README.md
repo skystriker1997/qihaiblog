@@ -2,7 +2,7 @@ This project is my personal blog, welcome to read my posts and explore the might
 
 本项目是我的博客。欢迎大家阅读我的文章，探索AI图片生成的乐趣。
 
-[`qihai.xyz`](qihai.xyz)
+[`qihai.xyz`](www.qihai.xyz)
 
 ## Tech Stacks 技术栈
 
