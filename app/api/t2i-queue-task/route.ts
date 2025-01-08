@@ -4,9 +4,10 @@ import { TaskParams } from "@/type/type";
 
 
 const checkServiceStatus = async () => {
-    const res = await fetch(`${process.env.SERVICE_PORT}/api/t2i-service-status`);
+    const res = await fetch(`${process.env.NEXT_LOCAL_HOST}/api/t2i-service-status`);
     return res.json();
 }
+
 
 
 export async function POST(req: NextRequest) {

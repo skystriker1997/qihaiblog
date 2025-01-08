@@ -14,11 +14,11 @@ import os
 
 REMOTE_BASE_URL = os.environ['REMOTE_BASE_URL']
 
-GET_TASK_URL = REMOTE_BASE_URL + '/api/t2i-get-task'
-POST_RESULT_URL = REMOTE_BASE_URL + '/api/t2i-post-result'
-SERVICE_STATUS_URL = REMOTE_BASE_URL + '/api/t2i-service-status'
+GET_TASK_URL = f'{REMOTE_BASE_URL}/api/t2i-get-task'
+POST_RESULT_URL = f'{REMOTE_BASE_URL}/api/t2i-post-result'
+SERVICE_STATUS_URL = f'{REMOTE_BASE_URL}/api/t2i-service-status'
 
-API_TOKEN = os.environ.get('API_TOKEN')
+API_TOKEN = os.environ['API_TOKEN']
 
 shutdown_flag = threading.Event()
 task_queue = queue.Queue()
@@ -42,7 +42,7 @@ class TaskFetcher(threading.Thread):
             try:
                 response = requests.get(
                     GET_TASK_URL,
-                    headers={'Authorization': 'Bearer ' + API_TOKEN}
+                    headers={'Authorization': f'Bearer {API_TOKEN}'}
                 )
                 if response.status_code == 204:
                     time.sleep(5)

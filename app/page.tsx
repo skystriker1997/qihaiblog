@@ -1,5 +1,3 @@
-"use client"
-
 import Link from 'next/link';
 import { topArticle } from "@/special-pin/top-article";
 import { PostMeta } from "@/type/type";

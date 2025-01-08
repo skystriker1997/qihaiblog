@@ -19,3 +19,4 @@ export async function POST(req: NextRequest) {
     isServiceAvailable = status;
     return NextResponse.json({ message: 'Service status updated successfully' });
 }
+
